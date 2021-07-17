@@ -1,6 +1,6 @@
 {
   "name": "detox-web",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Abstraction on top of puppeteer to support Detox test to run on the web platform",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
