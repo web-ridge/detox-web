@@ -49,3 +49,7 @@ export async function reset() {
     permissions: { camera: 'YES', microphone: 'YES', notifications: 'YES' },
   });
 }
+
+export function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}

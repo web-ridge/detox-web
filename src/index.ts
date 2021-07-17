@@ -7,6 +7,7 @@ import {
   tapByText,
   tapByLabel,
   reset,
+  sleep,
 } from './helpers';
 
 export { by, device, element, expect };
@@ -18,4 +19,5 @@ export {
   tapByText,
   tapByLabel,
   reset,
+  sleep,
 };

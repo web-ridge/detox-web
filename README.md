@@ -12,6 +12,30 @@ npm install detox-web
 
 ## Usage
 
+
+```js
+// jest-puppeteer.config.js
+module.exports = {
+  launch: {
+    dumpio: false,
+    headless: process.env.HEADLESS !== 'false',
+    product: 'chrome',
+  },
+  browserContext: 'default',
+};
+```
+
+package.json
+```json
+{
+  "ios:test-build": "detox build --configuration ios",
+  "ios:test": "detox test --configuration ios --workers=5",
+  "android:test-build": "detox build --configuration android",
+  "android:test": "detox test --configuration android",
+  "web:test": "react-scripts test --env=puppeteer"
+}
+```
+
 ```js
 import { by, device, element, expect } from 'detox-web'
 // and extra helpers to simplify test code :)
@@ -23,6 +47,7 @@ import {
   tapByText,
   tapByLabel,
   reset,
+  sleep
 } from 'detox-web'
 
 describe('User should be welcomed by required onboarding screen', () => {
