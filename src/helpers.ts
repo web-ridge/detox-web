@@ -1,5 +1,5 @@
-//@ts-ignore
-import { by, device, element, expect } from 'detox-puppeteer';
+
+import { by, device, element, expect } from 'detox';
 
 export async function replaceTextById(
   id: string,
